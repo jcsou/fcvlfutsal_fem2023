@@ -28,6 +28,22 @@ export default new Router({
         // this generates a separate chunk (about.[hash].js) for this route
         // which is lazy-loaded when the route is visited.
         component: () => import(/* webpackChunkName: "about" */ './views/U15FPouleA.vue')
+    },
+    {
+        path: '/RegularTables',
+        name: 'RegularTables',
+        // route level code-splitting
+        // this generates a separate chunk (about.[hash].js) for this route
+        // which is lazy-loaded when the route is visited.
+        component: () => import(/* webpackChunkName: "about" */ './views/RegularTables.vue')
+    },
+    {
+        path: '/Dashboard',
+        name: 'Dashboard',
+        // route level code-splitting
+        // this generates a separate chunk (about.[hash].js) for this route
+        // which is lazy-loaded when the route is visited.
+        component: () => import(/* webpackChunkName: "about" */ './views/Dashboard.vue')
     }
   ]
 })

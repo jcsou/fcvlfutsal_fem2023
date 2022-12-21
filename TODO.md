@@ -1,3 +1,5 @@
+
+```bash
 ncu
 ncu -u
 npm install
@@ -7,8 +9,12 @@ cd fcvlfutsal_fem2023
 vue add vuetify
 vue add router
 
+yarn add vue-chartist
+yarn add vuex
 
 yarn add axios
+
+```
 
 https://morioh.com/p/b704f8438c84
 

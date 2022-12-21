@@ -1,9 +1,10 @@
 <template>
-  <v-card :loading="loading" class="mx-auto my-12">
+  <v-card class="mx-auto my-12">
     <v-tabs color="deep-purple accent-4" right>
         <v-tab>Match</v-tab>
         <v-tab>Classement</v-tab>
-<button @click="update()" class="btn btn-default pull-right " style="height=15px;"><i _ngcontent-pro-c19="" class="material-icons icon-image-preview">loop</i></button>
+        <i aria-hidden="true" @click="update()" role="button" aria-haspopup="true" aria-expanded="false" class="v-icon notranslate mdi mdi-backup-restore theme--light"></i>
+
         <v-tab-item>
             <v-card flat>
               <v-card-text>

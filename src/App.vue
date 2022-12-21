@@ -55,6 +55,8 @@ export default {
       { title: 'Home', icon: 'mdi-view-dashboard', route: '/' },
       { title: 'About', icon: 'mdi-account-box', route: '/about' },
       { title: 'Test', icon: 'mdi-cog', route: '/test' },
+      { title: 'RegularTables', icon: 'mdi-cog', route: '/RegularTables' },
+      { title: 'Dashboard', icon: 'mdi-cog', route: '/Dashboard' },
     ],
   }),
 };
