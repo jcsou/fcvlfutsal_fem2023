@@ -1,0 +1,76 @@
+{
+  "lescategories": [
+    {
+      "id": "F_c1",
+      "nom": "SenF/U18F",
+      "nomlong": "Seniors F et U18F"
+    },
+    {
+      "id": "F_c1",
+      "nom": "U15F",
+      "nomlong": "U15F"
+    }
+  ],
+  "lesequipes": [
+    {
+      "categorie_id": "F_c1",
+      "id": "F1",
+      "nom": "BreilSurMerise 1",
+      "fanion": "breilsurmerise.png"
+    },
+    {
+      "categorie_id": "F_c1",
+      "id": "F2",
+      "nom": "FCVL 1",
+      "fanion": "fcvl.png"
+    },
+    {
+      "categorie_id": "F_c1",
+      "id": "F3",
+      "nom": "COC",
+      "fanion": "coc.png"
+    },
+    {
+      "categorie_id": "F_c1",
+      "id": "F4",
+      "nom": "district 1",
+      "fanion": "district.png"
+    },
+    {
+      "categorie_id": "F_c1",
+      "id": "F5",
+      "nom": "BreilSurMerise 2",
+      "fanion": "breilsurmerise.png"
+    },
+    {
+      "categorie_id": "F_c1",
+      "id": "F6",
+      "nom": "FCVL 2",
+      "fanion": "fcvl.png"
+    },
+    {
+      "categorie_id": "F_c1",
+      "id": "F7",
+      "nom": "Changé U18F",
+      "fanion": "change.png"
+    },
+    {
+      "categorie_id": "F_c1",
+      "id": "F8",
+      "nom": "district 2",
+      "fanion": "district.png"
+    }
+  ],
+  "lessalles": [
+    {
+      "id": "CCVL",
+      "nom":"CCVL",
+      "nomlong": "Gymnase Val Du Loir"
+    },
+    {
+      "id": "GLC",
+      "nom": "GLCroix",
+      "nomlong": "Gymnase GuyLaCroix"
+    }
+  ]
+}

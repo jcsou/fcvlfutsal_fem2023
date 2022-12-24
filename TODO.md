@@ -12,7 +12,14 @@ vue add router
 yarn add vue-chartist
 yarn add vuex
 
+yarn upgrade vuetify@2.6.13
+yarn upgrade vuex@3.6.2
+
+yarn remove vue-chartist
+
 yarn add axios
+
+yarn add @mdi/js
 
 ```
 

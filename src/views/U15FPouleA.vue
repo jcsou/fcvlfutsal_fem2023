@@ -3,7 +3,7 @@
     <v-tabs color="deep-purple accent-4" right>
         <v-tab>Match</v-tab>
         <v-tab>Classement</v-tab>
-        <i aria-hidden="true" @click="update()" role="button" aria-haspopup="true" aria-expanded="false" class="v-icon notranslate mdi mdi-backup-restore theme--light"></i>
+        <i aria-hidden="true" @click="update()" role="button" aria-haspopup="true" aria-expanded="false" class="v-icon notranslate mdi mdi-autorenew theme--light"></i>
 
         <v-tab-item>
             <v-card flat>

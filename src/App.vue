@@ -1,63 +1,78 @@
 <template>
   <v-app>
-    <v-app-bar color="green" class="flex-grow-0" app dark>
-        <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-
+    <v-app-bar color="blue" class="flex-grow-0" app dark>
+        <v-btn class="mr-3" elevation="1" fab small @click="setDrawer(!drawer)">
+          <v-icon v-if="drawer">mdi-dots-vertical</v-icon>
+          <v-icon v-else>mdi-backburger</v-icon>
+        </v-btn>
         <!-- Start of app toolbar -->
         <v-toolbar >
-          <v-toolbar-title class="headline text-uppercase">
-              Vuetify Demo
+          <v-toolbar-title class="display1 text-uppercase">
+                FCVL Futsal Féminin 2023
           </v-toolbar-title>
 
           <v-spacer></v-spacer>
 
-          <v-toolbar-items class="hidden-sm-and-down">
-            <v-btn text to="/" exact>Home</v-btn>
-            <v-btn text to="/about">About</v-btn>
-            <v-btn text to="/test">Test</v-btn>
+          <v-toolbar-items >
+            <v-btn text to="/" exact><img src="./assets/logo.png" alt="LogoFcvl Logo" height="35"/></v-btn>
           </v-toolbar-items>
         </v-toolbar>
       <!-- End of app toolbar -->
     </v-app-bar>
-    <v-navigation-drawer app v-model="drawer">
-      <v-list-item>
-        <v-list-item-content>
-          <v-list-item-title class="text-h6"> Learning Vuetify </v-list-item-title>
-          <v-list-item-subtitle> Navigation drawers</v-list-item-subtitle>
-        </v-list-item-content>
-      </v-list-item>
-      <v-divider></v-divider>
-      <v-list dense nav>
-          <v-list-item v-for="item in items" :key="item.title" :to="item.route" link >
-            <v-list-item-icon>
-              <v-icon>{{ item.icon }}</v-icon>
-            </v-list-item-icon>
 
-            <v-list-item-content>
-              <v-list-item-title>{{ item.title }}</v-list-item-title>
-            </v-list-item-content>
-          </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
+    <core-drawer />
+
     <v-main>
       <!-- Display view pages here based on route -->
       <router-view></router-view>
     </v-main>
+
+    <v-footer id="core-footer">
+        <v-container>
+          <v-row align="center" no-gutters>
+            <v-spacer class="hidden-sm-and-down" />
+            <v-col cols="12" md="auto">
+              <div class="body-1 font-weight-light pt-6 pt-md-0 text-center">
+                &copy;2023 JcSouvignet,
+                  Avec
+                  <a href="https://vuejs.org/" target="_blank"><img src="https://vuejs.org/images/logo.png" alt="VueJS Logo" height="16" />VueJS</a>,
+                  et <a href="https://www.creative-tim.com/product/vuetify-material-dashboard" target="_blank">vuetify-material</a>
+                  by <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>.
+              </div>
+            </v-col>
+          </v-row>
+        </v-container>
+      </v-footer>
   </v-app>
 </template>
 
 <script>
+
+// Utilities
+import { mapState, mapMutations } from 'vuex'
+
 export default {
   name: 'App',
-  data: () => ({
-    drawer: false,
-    items: [
-      { title: 'Home', icon: 'mdi-view-dashboard', route: '/' },
-      { title: 'About', icon: 'mdi-account-box', route: '/about' },
-      { title: 'Test', icon: 'mdi-cog', route: '/test' },
-      { title: 'RegularTables', icon: 'mdi-cog', route: '/RegularTables' },
-      { title: 'Dashboard', icon: 'mdi-cog', route: '/Dashboard' },
-    ],
-  }),
+
+  components: {
+    CoreDrawer: () => import('./Drawer'),
+  },
+
+  computed: {
+      ...mapState(['drawer']),
+  },
+  methods: {
+    ...mapMutations({
+      setDrawer: 'SET_DRAWER',
+    }),
+  },
 };
 </script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+.v-footer {
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+</style>

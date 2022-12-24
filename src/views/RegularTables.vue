@@ -4,142 +4,71 @@
     fluid
     tag="section"
   >
-    <base-v-component
-      heading="Simple Tables"
-      link="components/simple-tables"
-    />
 
     <base-material-card
       icon="mdi-clipboard-text"
-      title="Simple Table"
+      title="Senior F/U18F"
       class="px-5 py-3"
+      color="primary"
     >
       <v-simple-table>
         <thead>
           <tr>
-            <th class="primary--text">
-              ID
-            </th>
-            <th class="primary--text">
-              Name
-            </th>
-            <th class="primary--text">
-              Country
-            </th>
-            <th class="primary--text">
-              City
-            </th>
-            <th class="text-right primary--text">
-              Salary
-            </th>
+            <th class="primary--text">N°</th>
+            <th class="primary--text"></th>
+            <th class="primary--text">Nom</th>
           </tr>
         </thead>
-
         <tbody>
-          <tr>
-            <td>1</td>
-            <td>Dakota Rice</td>
-            <td>Niger</td>
-            <td>Oud-Turnhout</td>
-            <td class="text-right">
-              $36,738
-            </td>
+          <tr v-for="(equipe, n) in equipes" :key="equipe.id">
+            <td>{{n+1}}</td>
+            <td><v-img  v-bind:src="'img/fanion/'+equipe.fanion" max-height="30" max-width="30"/></td>
+            <td width="100%" >{{equipe.nom}}</td>
           </tr>
-
-          <tr>
-            <td>2</td>
-            <td>Minverva Hooper</td>
-            <td>Curaçao</td>
-            <td>Sinaas-Waas</td>
-            <td class="text-right">
-              $23,789
-            </td>
-          </tr>
-
-          <tr>
-            <td>3</td>
-            <td>Sage Rodriguez</td>
-            <td>Netherlands</td>
-            <td>Baileux</td>
-            <td class="text-right">
-              $56,142
-            </td>
-          </tr>
-
-          <tr>
-            <td>4</td>
-            <td>Philip Chaney</td>
-            <td>Korea, South</td>
-            <td>Overland Park</td>
-            <td class="text-right">
-              $38,735
-            </td>
-          </tr>
-
-          <tr>
-            <td>5</td>
-            <td>Doris Greene</td>
-            <td>Malawi</td>
-            <td>Feldkirchen in Kärnten</td>
-            <td class="text-right">
-              $63,542
-            </td>
-          </tr>
-
-          <tr>
-            <td>6</td>
-            <td>Mason Porter</td>
-            <td>Chile</td>
-            <td>Gloucester</td>
-            <td class="text-right">
-              $78,615
+          <tr colspan="3">
+            <td>
+              button
             </td>
           </tr>
         </tbody>
       </v-simple-table>
     </base-material-card>
-
-    <div class="py-3" />
-
-    <base-material-card
-      color="success"
-      dark
-      icon="mdi-clipboard-plus"
-      title="Table on Dark Background"
-      class="px-5 py-3"
-    >
-      <v-simple-table>
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Country</th>
-            <th>City</th>
-            <th class="text-right">
-              Salary
-            </th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td>Dakota Rice</td>
-            <td>Niger</td>
-            <td>Oud-Turnhout</td>
-            <td class="text-right">
-              $36,738
-            </td>
-          </tr>
-
-        </tbody>
-      </v-simple-table>
-    </base-material-card>
-
-    <div class="py-3" />
-
-
-
 
   </v-container>
 </template>
+
+<script>
+import axios from 'axios'
+
+export default {
+    data() {
+      return {
+        categorie: "U11",
+        url: process.env.BASE_URL + "datas/equipes.json",
+        equipes: null,
+      };
+    },
+    created() {
+      this.loadDataOds();
+      // this.timer = setInterval(this.loadDataOds, 10000);
+    },
+    methods: {
+        update(){
+            this.loadDataOds();
+        },
+        loadDataOds() {
+            var url = this.url;
+            axios
+                .get(url)
+                .then(response => {
+                  this.equipes = response.data.lesequipes
+                }).catch(error => {
+                   console.log(error)
+                })
+          },
+
+    },
+};
+</script>
+
+
