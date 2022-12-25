@@ -3,7 +3,7 @@
         <v-row>
             <v-col class="text-center">
                 <h1 >Tournoi en salle Féminin du FC Val Du Loir</h1>
-                <h2 >Vendredi 06/01/2023</h2>
+                <h2 >Vendredi Soir 06/01/2023</h2>
             </v-col>
         </v-row>
 

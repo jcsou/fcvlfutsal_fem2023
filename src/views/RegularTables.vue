@@ -4,7 +4,8 @@
     fluid
     tag="section"
   >
-
+    <v-row>
+    <v-col>
     <base-material-card
       icon="mdi-clipboard-text"
       title="Senior F/U18F"
@@ -14,7 +15,7 @@
       <v-simple-table>
         <thead>
           <tr>
-            <th class="primary--text">N°</th>
+            <th class="primary--text"></th>
             <th class="primary--text"></th>
             <th class="primary--text">Nom</th>
           </tr>
@@ -27,13 +28,42 @@
           </tr>
           <tr colspan="3">
             <td>
-              button
+              <v-btn color="primary" rounded class="mr-0">Poules</v-btn> <v-btn color="primary" rounded class="mr-0">Finales</v-btn>
             </td>
           </tr>
         </tbody>
       </v-simple-table>
     </base-material-card>
+    </v-col>
+    <v-col>
+    <base-material-card
+            class="v-card-profile"
+            avatar="https://demos.creative-tim.com/vue-material-dashboard/img/marc.aba54d65.jpg"
+    >
+      <v-card-text class="text-center">
+        <h6 class="display-1 mb-1 grey--text">
+          CEO / CO-FOUNDER
+        </h6>
 
+        <h4 class="display-2 font-weight-light mb-3 black--text">
+          Alec Thompson
+        </h4>
+
+        <p class="font-weight-light grey--text">
+          Dont be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens bed design but the back is...
+        </p>
+
+        <v-btn
+                color="primary"
+                rounded
+                class="mr-0"
+        >
+          Follow
+        </v-btn>
+      </v-card-text>
+    </base-material-card>
+    </v-col>
+    </v-row>
   </v-container>
 </template>
 

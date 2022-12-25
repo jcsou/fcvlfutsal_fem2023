@@ -6,7 +6,7 @@ import store from './store'
 import './plugins/base'
 import vuetify from './plugins/vuetify'
 
-import mdiAccount from '@mdi/js'
+import {mdiAccount} from '@mdi/js'
 
 Vue.config.productionTip = false
 

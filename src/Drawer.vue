@@ -36,16 +36,10 @@
       <div />
 
       <template v-for="(item, i) in computedItems">
-        <base-item-group
-          v-if="item.children"
-          :key="`group-${i}`"
-          :item="item"
-        >
-          <!--  -->
-        </base-item-group>
+
+
 
         <base-item
-          v-else
           :key="`item-${i}`"
           :item="item"
         />
@@ -75,6 +69,9 @@
         { title: 'Test', icon: 'mdi-cog', to: '/test' },
         { title: 'RegularTables', icon: 'mdi-cog', to: '/RegularTables' },
         { title: 'Dashboard', icon: 'mdi-cog', to: '/Dashboard' },
+        { title: 'SenF Poules', icon: 'mdi-view-split-vertical', to: '/SenFPoules' },
+        { title: 'SenF Finale', icon: 'mdi-format-line-weight', to: '/SenFFinales' },
+
       ],
     }),
 
@@ -121,12 +118,12 @@
         width: 20px
 
         +ltr()
-          margin-right: 24px
-          margin-left: 12px !important
+          margin-right: 2px
+          margin-left: 1px !important
 
         +rtl()
-          margin-left: 24px
-          margin-right: 12px !important
+          margin-left: 2px
+          margin-right: 1px !important
 
     .v-list--dense
       .v-list-item
