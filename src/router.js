@@ -14,38 +14,6 @@ export default new Router({
       component: AccueilView
     },
     {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/AboutView.vue')
-    },
-    {
-        path: '/test',
-        name: 'test',
-        // route level code-splitting
-        // this generates a separate chunk (about.[hash].js) for this route
-        // which is lazy-loaded when the route is visited.
-        component: () => import(/* webpackChunkName: "about" */ './views/U15FPouleA.vue')
-    },
-    {
-        path: '/RegularTables',
-        name: 'RegularTables',
-        // route level code-splitting
-        // this generates a separate chunk (about.[hash].js) for this route
-        // which is lazy-loaded when the route is visited.
-        component: () => import(/* webpackChunkName: "about" */ './views/RegularTables.vue')
-    },
-    {
-        path: '/Dashboard',
-        name: 'Dashboard',
-        // route level code-splitting
-        // this generates a separate chunk (about.[hash].js) for this route
-        // which is lazy-loaded when the route is visited.
-        component: () => import(/* webpackChunkName: "about" */ './views/Dashboard.vue')
-    },
-    {
         path: '/SenFPoules',
         name: 'SenFPoules',
         // route level code-splitting

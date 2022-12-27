@@ -8,7 +8,7 @@
     :src="barImage"
     mobile-breakpoint="960"
     app
-    width="170"
+    width="200"
     v-bind="$attrs"
   >
     <template v-slot:img="props">
@@ -24,7 +24,7 @@
         </v-list-item-title>
       </v-list-item>
       <v-list-item>
-        <v-list-item-subtitle>Futsal Féminin 23</v-list-item-subtitle>
+        <v-list-item-subtitle>Futsal Féminin 2023</v-list-item-subtitle>
       </v-list-item>
     </v-list>
 
@@ -36,9 +36,6 @@
       <div />
 
       <template v-for="(item, i) in computedItems">
-
-
-
         <base-item
           :key="`item-${i}`"
           :item="item"
@@ -48,6 +45,16 @@
       <!-- Style cascading bug  -->
       <!-- https://github.com/vuetifyjs/vuetify/pull/8574 -->
       <div />
+
+<!--      <v-list-item class="mx-1" v-for="item in computedItems" :key="item.title" link :to="item.to">-->
+<!--        <v-list-item-icon>-->
+<!--          <v-icon>{{ item.icon }}</v-icon>-->
+<!--        </v-list-item-icon>-->
+
+<!--        <v-list-item-content>-->
+<!--          <v-list-item-title>{{ item.title }}</v-list-item-title>-->
+<!--        </v-list-item-content>-->
+<!--      </v-list-item>-->
     </v-list>
   </v-navigation-drawer>
 </template>
@@ -65,13 +72,8 @@
       expandOnHover: false,
       items: [
         { title: 'Accueil', icon: 'mdi-view-dashboard', to: '/' },
-        { title: 'About', icon: 'mdi-account-box', to: '/about' },
-        { title: 'Test', icon: 'mdi-cog', to: '/test' },
-        { title: 'RegularTables', icon: 'mdi-cog', to: '/RegularTables' },
-        { title: 'Dashboard', icon: 'mdi-cog', to: '/Dashboard' },
         { title: 'SenF Poules', icon: 'mdi-view-split-vertical', to: '/SenFPoules' },
-        { title: 'SenF Finale', icon: 'mdi-format-line-weight', to: '/SenFFinales' },
-
+        { title: 'SenF Finales', icon: 'mdi-format-line-weight', to: '/SenFFinales' },
       ],
     }),
 
@@ -103,60 +105,9 @@
   }
 </script>
 
-<style lang="sass">
-  @import '~vuetify/src/styles/tools/_rtl.sass'
-
-  #core-navigation-drawer
-    .v-list-group__header.v-list-item--active:before
-      opacity: .24
-
-    .v-list-item
-      &__icon--text,
-      &__icon:first-child
-        justify-content: center
-        text-align: center
-        width: 20px
-
-        +ltr()
-          margin-right: 2px
-          margin-left: 1px !important
-
-        +rtl()
-          margin-left: 2px
-          margin-right: 1px !important
-
-    .v-list--dense
-      .v-list-item
-        &__icon--text,
-        &__icon:first-child
-          margin-top: 10px
-
-    .v-list-group--sub-group
-      .v-list-item
-        +ltr()
-          padding-left: 8px
-
-        +rtl()
-          padding-right: 8px
-
-      .v-list-group__header
-        +ltr()
-          padding-right: 0
-
-        +rtl()
-          padding-right: 0
-
-        .v-list-item__icon--text
-          margin-top: 19px
-          order: 0
-
-        .v-list-group__header__prepend-icon
-          order: 2
-
-          +ltr()
-            margin-right: 8px
-
-          +rtl()
-            margin-left: 8px
-
+<style scoped >
+.v-list-item {
+  margin-right: 2px;
+  margin-left: 1px !important;
+}
 </style>

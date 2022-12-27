@@ -1,46 +1,77 @@
 <template>
-  <v-container id="poules" fluid tag="section" >
-  <v-row>
-  <v-col>
-      <v-card class="mx-auto my-12">
-        <v-tabs color="deep-purple accent-4" right>
-          <v-tab>Poule A</v-tab>
-          <v-tab>Poule B</v-tab>
+      <v-card class="mx-auto">
+        <v-tabs color="primary accent-4" left>
+          <v-tab >Poule A</v-tab>
+          <v-tab >Poule B</v-tab>
           <v-tab-item>
-
-            <base-material-card color="primary" class="px-5 py-3">
-              <template v-slot:heading>
-                <div class="display-2 font-weight-light">Matchs Poule A Senior F et U18F </div>
-              </template>
-              <v-card-text>
-                <v-data-table :headers="headersMatch" :items="lesmatchs" hide-default-footer />
-              </v-card-text>
-            </base-material-card>
-
-
-            <v-card flat>
-              <v-card-text>
-                <p>
-                  Match
-                </p>
-              </v-card-text>
-            </v-card>
+            <v-container id="pouleA-match" fluid tag="section">
+            <v-row>
+              <v-col>
+                <base-material-card color="primary" class="px-0"  >
+                  <template v-slot:heading>
+                    <div class="display-2 font-weight-light">SeniorF/U18F-PouleA-Matchs</div>
+                  </template>
+                  <v-card-text class="px-0" >
+                    <v-data-table :headers="headersMatch" :items="lesmatchsA" hide-default-footer class="px-0" mobile-breakpoint="350">
+                      <template v-slot:[`item.id`]="{ item }">
+                        <h6 class="display-1 mb-1 black--text">{{ item.id}}</h6>
+                        <h6 class="display-1 mb-1 grey--text">{{ item.salle}}</h6>
+                        <h6 class="display-1 mb-1 grey--text">{{ item.heureDebut}}</h6>
+                      </template>
+                      <template v-slot:[`item.displayDom.fanion`]="{ item }">
+                            <v-avatar>
+                              <v-img v-bind:src="'img/fanion/'+item.displayDom.fanion" :alt="item.displayDom.nomCourt" max-height="25" max-width="25"/>
+                            </v-avatar>
+                            <h6 class="display-1 mb-1 grey--text">{{ item.displayDom.nomCourt }}</h6>
+                      </template>
+                      <template v-slot:[`item.score`]="{ item }">
+                        <v-chip color="grey" ><h6 class="display-1 mb-1 font-weight-bold">{{ item.score }}</h6></v-chip>
+                      </template>
+                      <template v-slot:[`item.displayExt.fanion`]="{ item }">
+                            <v-avatar>
+                              <v-img v-bind:src="'img/fanion/'+item.displayExt.fanion" :alt="item.displayExt.nomCourt" max-height="25" max-width="25"/>
+                            </v-avatar>
+                            <h6 class="display-1 mb-1 grey--text">{{ item.displayExt.nomCourt }}</h6>
+                      </template>
+                    </v-data-table>
+                  </v-card-text>
+                </base-material-card>
+              </v-col>
+              <v-col>
+                <base-material-card color="primary" class="px-0"  >
+                  <template v-slot:heading>
+                      <div class="display-2 font-weight-light">SeniorF/U18F-PouleA-Classement</div>
+                  </template>
+                  <v-card-text class="px-0" >
+                      <v-data-table :headers="headersClassement" :items="leclassementA" hide-default-footer class="px-0" mobile-breakpoint="350">
+                          <template v-slot:[`item.displayEqui.nom`]="{ item }">
+                              <v-chip class="ma-2" label>
+                                  <v-avatar left>
+                                      <v-img v-bind:src="'img/fanion/'+item.displayEqui.fanion" :alt="item.displayEqui.nomCourt"/>
+                                  </v-avatar>
+                                  <h6 class="display-1 mb-1 ">{{ item.displayEqui.nom }}</h6>
+                              </v-chip>
+                          </template>
+                          <template v-slot:[`item.butsPour`]="{ item }">{{ item.butsPour }} / {{ item.butsContre }}</template>
+                      </v-data-table>
+                  </v-card-text>
+                </base-material-card>
+              </v-col>
+            </v-row>
+          </v-container>
           </v-tab-item>
-          <v-tab-item>
-            <v-card flat>
-              <v-card-text>
-                <p>
-                  PouleB a venir
-                </p>
-              </v-card-text>
-            </v-card>
-          </v-tab-item>
+
+<!--          <v-tab-item>-->
+<!--            <v-card flat>-->
+<!--              <v-card-text>-->
+<!--                <p>-->
+<!--                  PouleB a venir-->
+<!--                </p>-->
+<!--              </v-card-text>-->
+<!--            </v-card>-->
+<!--          </v-tab-item>-->
       </v-tabs>
     </v-card>
-
-  </v-col>
-  </v-row>
-  </v-container>
 </template>
 
 <script>
@@ -49,77 +80,144 @@ import axios from 'axios'
 export default {
     data() {
       return {
-        urlPoule: process.env.BASE_URL + "datas/F_c1_poule.json",
-        urlEquipe: process.env.BASE_URL + "datas/equipes.json",
-        lesmatchs: [],
-        lesequipes: [],
+        urlPoule: process.env.BASE_URL + "datas/F_c1_pouleA.json",
+        urlEquipe: process.env.BASE_URL + "datas/info_tournoi.json",
+        lesmatchsA: [],
+        leclassementA: [],
+        lesequipeskey: {},
+        filteredByQuantityIncome:[
+          {
+            email: 'myemail',
+            currency: 'euro',
+            quantity: '25',
+            types: 'mytypes',
+            totalIncomeAmount: '3',
+          },
+        ],
         headersMatch: [
           {
             sortable: false,
-            text: 'ID',
+            text: 'Salle/Heure',
             value: 'id',
-          },
-          {
-            sortable: false,
-            text: 'Salle',
-            value: 'salle',
-          },
-          {
-            sortable: false,
-            text: 'Horaire',
-            value: 'heureDebut',
+            align: 'center',
+            class: 'px-1',
+            cellClass: 'px-1',
           },
           {
             sortable: false,
             text: 'Equipe Domicile',
-            value: 'equipeDom.id',
+            value: 'displayDom.fanion',
+            align: 'center',
+            class: 'px-1',
+            cellClass: 'px-1',
+          },
+          {
+            sortable: false,
+            text: 'Score',
+            value: 'score',
+            align: 'center',
+            class: 'font-weight-bold px-0',
+            cellClass: 'px-1',
           },
           {
             sortable: false,
             text: 'Equipe Exterieur',
-            value: 'equipeExt.id',
+            value: 'displayExt.fanion',
+            align: 'center',
+            class: 'px-1',
+            cellClass: 'px-1',
+          },
+        ],
+        headersClassement: [
+          {
+            sortable: false,
+            text: 'Rang',
+            value: 'rang',
+            align: 'center',
+            class: 'px-1',
+            cellClass: 'px-1',
+          },
+          {
+            sortable: false,
+            text: 'Points',
+            value: 'points',
+            align: 'center',
+            class: 'font-weight-bold px-1',
+            cellClass: 'font-weight-bold px-1',
+          },
+          {
+            sortable: false,
+            text: 'Diff Buts',
+            value: 'diffbuts',
+            align: 'center',
+            class: 'font-weight-bold px-1',
+            cellClass: 'font-weight-bold px-1',
+          },
+          {
+            sortable: false,
+            text: 'Equipe',
+            align: 'center',
+            value: 'displayEqui.nom',
+            class: 'px-1',
+            cellClass: 'px-1 text-start',
+            mobile: 'false',
+          },
+          {
+            sortable: false,
+            text: 'Buts Pour/Contre',
+            align: 'center',
+            value: 'butsPour',
+            class: 'px-1',
+            cellClass: 'px-1 text-left',
+            mobile: 'false',
           },
         ],
       };
     },
     created() {
+      var urlEquipe = this.urlEquipe;
+      axios
+          .get(urlEquipe)
+          .then(response => {
+            var equipes = response.data.lesequipes
+            for (var n in equipes) {
+                this.lesequipeskey[equipes[n].id] = equipes[n]
+            }
+            //console.log(this.lesequipeskey)
+          }).catch(error => {
+             console.log(error)
+          });
+
       this.loadDataOds();
-      // this.timer = setInterval(this.loadDataOds, 10000);
     },
     methods: {
         update(){
             this.loadDataOds();
         },
         loadDataOds() {
-            var urlEquipe = this.urlEquipe;
-            axios
-                .get(urlEquipe)
-                .then(response => {
-                  this.lesequipes = response.data.lesequipes
-                }).catch(error => {
-                   console.log(error)
-                });
-
             var urlPoule = this.urlPoule;
             axios
                 .get(urlPoule)
                 .then(response => {
-                  this.lesmatchs = response.data.lesmatchs
+                  this.lesmatchsA = response.data.lesmatchs
+                  this.leclassementA = response.data.leclassement
 
-                  for (var n in this.lesmatchs) {
-                      this.lesmatchs[n].displayDom = this.lesmatchs[n].equipeDom.id + "lal"
-                      this.lesmatchs[n].displayExt = this.lesmatchs[n].equipeExt.id + "lil"
-
-
-
-                      console.log(this.lesmatchs[n])
+                  for (var n in this.lesmatchsA ) {
+                    this.lesmatchsA[n].score = this.lesmatchsA[n].equipeDom.but+" - "+this.lesmatchsA[n].equipeExt.but
+                    this.lesmatchsA[n].displayDom = this.lesequipeskey[this.lesmatchsA[n].equipeDom.id]
+                    this.lesmatchsA[n].displayExt = this.lesequipeskey[this.lesmatchsA[n].equipeExt.id]
                   }
 
+                  for (var z in this.leclassementA ) {
+                    this.leclassementA[z].displayEqui = this.lesequipeskey[this.leclassementA[z].id]
+                  }
+
+                  //console.log(this.lesmatchsA)
                 }).catch(error => {
                    console.log(error)
                 })
           },
-
     },
 };
 </script>
+
