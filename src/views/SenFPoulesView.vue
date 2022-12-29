@@ -3,13 +3,17 @@
         <v-tabs color="primary accent-4" left>
           <v-tab >Poule A</v-tab>
           <v-tab >Poule B</v-tab>
+            <v-chip class="ma-2" label @click.stop="update()">
+                <v-icon>mdi-reload</v-icon>Reload
+            </v-chip>
+
           <v-tab-item>
             <v-container id="pouleA-match" fluid tag="section">
             <v-row>
               <v-col>
-                <base-material-card color="primary" class="px-0"  >
+                <base-material-card color="colorPA" class="px-0"  >
                   <template v-slot:heading>
-                    <div class="display-2 font-weight-light">SeniorF/U18F-PouleA-Matchs</div>
+                  <div class="display-2 font-weight-light">SeniorF/U18F-PouleA-Matchs</div>
                   </template>
                   <v-card-text class="px-0" >
                     <v-data-table :headers="headersMatch" :items="lesmatchsA" hide-default-footer class="px-0" mobile-breakpoint="350">
@@ -38,7 +42,7 @@
                 </base-material-card>
               </v-col>
               <v-col>
-                <base-material-card color="primary" class="px-0"  >
+                <base-material-card color="colorPA" class="px-0"  >
                   <template v-slot:heading>
                       <div class="display-2 font-weight-light">SeniorF/U18F-PouleA-Classement</div>
                   </template>
@@ -56,6 +60,12 @@
                       </v-data-table>
                   </v-card-text>
                 </base-material-card>
+
+                <v-card max-width="400" class="mx-auto">
+                    <v-img class="mx-auto" max-height="200px" max-width="200px" src="img/pub/mma.png" alt="mma"/>
+                    <v-card-title>Annonceurs</v-card-title>
+                </v-card>
+
               </v-col>
             </v-row>
           </v-container>
@@ -80,20 +90,11 @@ import axios from 'axios'
 export default {
     data() {
       return {
-        urlPoule: process.env.BASE_URL + "datas/F_c1_pouleA.json",
+        urlPouleA: process.env.BASE_URL + "datas/F_c1_pouleA.json",
         urlEquipe: process.env.BASE_URL + "datas/info_tournoi.json",
         lesmatchsA: [],
         leclassementA: [],
         lesequipeskey: {},
-        filteredByQuantityIncome:[
-          {
-            email: 'myemail',
-            currency: 'euro',
-            quantity: '25',
-            types: 'mytypes',
-            totalIncomeAmount: '3',
-          },
-        ],
         headersMatch: [
           {
             sortable: false,
@@ -175,29 +176,35 @@ export default {
       };
     },
     created() {
-      var urlEquipe = this.urlEquipe;
-      axios
-          .get(urlEquipe)
-          .then(response => {
-            var equipes = response.data.lesequipes
-            for (var n in equipes) {
-                this.lesequipeskey[equipes[n].id] = equipes[n]
-            }
-            //console.log(this.lesequipeskey)
-          }).catch(error => {
-             console.log(error)
-          });
-
       this.loadDataOds();
+      // reload automatic
+      setInterval(this.update(), 20000);
     },
     methods: {
         update(){
             this.loadDataOds();
+            //console.log("update called");
         },
         loadDataOds() {
-            var urlPoule = this.urlPoule;
+
+            // Load Equipes
+            var urlEquipe = this.urlEquipe;
             axios
-                .get(urlPoule)
+              .get(urlEquipe)
+              .then(response => {
+                var equipes = response.data.lesequipes
+                for (var n in equipes) {
+                    this.lesequipeskey[equipes[n].id] = equipes[n]
+                }
+                //console.log(this.lesequipeskey)
+              }).catch(error => {
+                 console.log(error)
+              });
+
+            // Load PoulesA
+            var urlPouleA = this.urlPouleA;
+            axios
+                .get(urlPouleA)
                 .then(response => {
                   this.lesmatchsA = response.data.lesmatchs
                   this.leclassementA = response.data.leclassement
@@ -211,6 +218,8 @@ export default {
                   for (var z in this.leclassementA ) {
                     this.leclassementA[z].displayEqui = this.lesequipeskey[this.leclassementA[z].id]
                   }
+                  var sortedclassementA = this.leclassementA.sort((p1, p2) => (p1.rang > p2.rang) ? 1 : (p1.rang < p2.rang) ? -1 : 0)
+                  this.leclassementA = sortedclassementA
 
                   //console.log(this.lesmatchsA)
                 }).catch(error => {

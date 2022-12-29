@@ -4,19 +4,22 @@
             <v-col cols="12" sm="6" lg="4">
                 <v-card class="mx-auto px-0" max-width="400">
                   <v-img class="mx-auto" max-height="200px" max-width="200px" src="../assets/logo.png" alt="FCVL logo"/>
-                  <v-card-text class="text-center px-0">
+                  <v-card-text class="text-center pa-1">
                     <h3 class="display-2 font-weight-light mb-3 black--text">
                       Tournoi en salle Féminin
                     </h3>
-                    <p class="font-weight-light grey--text">Vendredi Soir 06/01/2023</p>
+                    <p class="font-weight-light grey--text">Vendredi Soir 06/01/2023 : Rdv 19h30, Début 20h</p>
+                    <p class="font-weight-light grey--text">2 catégories : <a @click="scrollMeTo('SenF')" >Seniors F/U18F</a> et <a @click="scrollMeTo('U15F')" >U15F</a> </p>
                   </v-card-text>
-                  <v-card-actions class="px-0 mx-lg-auto">
+                  <v-card-actions class="pa-1">
                     <v-chip class="ma-2" label link href="pdf/01_ReglementTournoi2023.pdf">
                        <v-icon left>mdi-information-outline</v-icon> Règlement
                     </v-chip>
+                    <v-spacer></v-spacer>
                     <v-chip class="ma-2" label @click.stop="dialogMap = true">
                        <v-icon left>mdi-map-outline</v-icon> Plan (Accès)
                     </v-chip>
+                    <v-spacer></v-spacer>
                     <v-chip class="ma-2" label @click.stop="dialogQRcode = true">
                        <v-icon left>mdi-share-variant</v-icon> URL QR Code
                     </v-chip>
@@ -55,9 +58,16 @@
                     </v-card-actions>
                   </v-card>
                 </v-dialog>
+
+                <v-card max-width="400" class="mx-auto">
+                    <v-img class="mx-auto" max-height="200px" max-width="200px" src="img/pub/mma.png" alt="mma"/>
+                    <v-card-title>Annonceurs</v-card-title>
+                </v-card>
+
             </v-col>
 
             <v-col cols="12" sm="6" lg="4">
+                <div ref="SenF"/>
                 <base-material-card
                       icon="mdi-clipboard-text"
                       title="Senior F/U18F"
@@ -102,6 +112,7 @@
             </v-col>
 
             <v-col cols="12" sm="6" lg="4">
+                <div ref="U15F"/>
                 <base-material-card
                       icon="mdi-clipboard-text"
                       title="U15F"
@@ -179,7 +190,12 @@ export default {
                    console.log(error)
                 })
           },
+        scrollMeTo(refName) {
+            var element = this.$refs[refName];
+            var top = element.offsetTop;
 
+            window.scrollTo(0, top);
+        },
     },
 };
 </script>

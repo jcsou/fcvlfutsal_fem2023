@@ -72,8 +72,11 @@
       expandOnHover: false,
       items: [
         { title: 'Accueil', icon: 'mdi-view-dashboard', to: '/' },
+        { title: 'U15F Poules', icon: 'mdi-view-split-vertical', to: '/U15FPoules' },
+        { title: 'U15F Finales', icon: 'mdi-format-line-weight', to: '/U15FFinales' },
         { title: 'SenF Poules', icon: 'mdi-view-split-vertical', to: '/SenFPoules' },
         { title: 'SenF Finales', icon: 'mdi-format-line-weight', to: '/SenFFinales' },
+        { title: 'Timeline', icon: 'mdi-timeline-clock-outline', to: '/Timeline' },
       ],
     }),
 

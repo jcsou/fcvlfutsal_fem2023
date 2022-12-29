@@ -36,9 +36,9 @@
     {
       "categorie_id": "F_c1",
       "id": "F4",
-      "nom": "District 1",
-      "nomCourt": "Dist1",
-      "fanion": "district.png"
+      "nom": "StSaturnin-LaMilesse",
+      "nomCourt": "FCSSM",
+      "fanion": "saintsatmilesse.png"
     },
     {
       "categorie_id": "F_c1",
@@ -64,9 +64,9 @@
     {
       "categorie_id": "F_c1",
       "id": "F8",
-      "nom": "District 2",
-      "nomCourt": "Dist2",
-      "fanion": "district.png"
+      "nom": "FC Val Du Loir U18F",
+      "nomCourt": "FCVL_U18F",
+      "fanion": "fcvlu18f.png"
     },
     {
       "categorie_id": "U15F_c2",
@@ -92,8 +92,8 @@
     {
       "categorie_id": "U15F_c2",
       "id": "U15F4",
-      "nom": "District 1",
-      "nomCourt": "Dist1",
+      "nom": "-",
+      "nomCourt": "-",
       "fanion": "district.png"
     },
     {
@@ -120,8 +120,8 @@
     {
       "categorie_id": "U15F_c2",
       "id": "U15F8",
-      "nom": "District 2",
-      "nomCourt": "Dist2",
+      "nom": "-",
+      "nomCourt": "-",
       "fanion": "district.png"
     }
   ],

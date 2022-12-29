@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar color="blue" class="flex-grow-0" app dark>
+    <v-app-bar color="primary" class="flex-grow-0" app dark>
         <v-btn class="mr-3" elevation="1" fab small @click="setDrawer(!drawer)">
           <v-icon v-if="drawer">mdi-dots-vertical</v-icon>
           <v-icon v-else>mdi-backburger</v-icon>
