@@ -48,7 +48,8 @@
                 <v-dialog v-model="dialogQRcode" max-width="500">
                   <v-card class="pa-1">
                     <v-card-title class="text-h5 pa-1">
-                        <h3 class="display-2 font-weight-light mb-3 black--text">Partager ce site ...</h3>
+                        <h3 class="display-2 font-weight-light mb-3 black--text">Partager ce site avec ce QRCode ...</h3>
+                        <h6 class="display-2 black--text">https://fcvalduloir.pagesperso-orange.fr/TES2023Fem/dist/</h6>
                     </v-card-title>
                     <v-card-text class="pa-1">
                       <v-img class="mx-auto" max-height="450px" max-width="450px" src="img/QRsite.png" alt="QRsite"/>
@@ -56,6 +57,35 @@
                     <v-card-actions class="pa-1 ">
                       <v-spacer></v-spacer>
                       <v-btn color="primary" text @click="dialogQRcode = false">Close</v-btn>
+                    </v-card-actions>
+                  </v-card>
+                </v-dialog>
+
+                <v-dialog v-model="dialogSalles" max-width="520">
+                  <v-card class="pa-1">
+                    <v-card-title class="text-h5 pa-1">
+                        <h3 class="display-2 font-weight-light mb-3 black--text">2 salles</h3>
+                    </v-card-title>
+                    <v-card-text class="pa-1">
+                      <v-container class="pa-0 ma-0">
+                          <v-row >
+                              <v-col class="pa-1 ma-0 ">
+                                  <h5 class="display-1 mb-1 text-center">1-GLC</h5>
+                                  <h6 class="display-1 mb-1 grey--text text-center">Gymnase Guy La Croix</h6>
+                                  <v-img class="mx-auto" max-height="200px" max-width="200px" src="img/salles/1-GLC-int.png" alt="1-GLC"/>
+                              </v-col>
+                              <v-col class="pa-1 ma-0">
+                                  <h5 class="display-1 mb-1 text-center">2-CCVL</h5>
+                                  <h6 class="display-1 mb-1 grey--text text-center">Gymnase CC Val du Loir</h6>
+                                  <v-img class="mx-auto" max-height="200px" max-width="200px" src="img/salles/2-CCVL.png" alt="2-CCVL"/>
+                              </v-col>
+                          </v-row>
+                      </v-container>
+
+                    </v-card-text>
+                    <v-card-actions class="pa-1 ">
+                      <v-spacer></v-spacer>
+                      <v-btn color="primary" text @click="dialogSalles = false">Close</v-btn>
                     </v-card-actions>
                   </v-card>
                 </v-dialog>
@@ -101,6 +131,10 @@
                       </v-simple-table>
                       <v-divider></v-divider>
                       <v-card-actions class="pa-0 ">
+                        <v-chip class="ma-2" label @click.stop="dialogSalles = true">
+                           <v-icon left>mdi-home-switch-outline</v-icon> Les Salles
+                        </v-chip>
+                        <v-spacer></v-spacer>
                         <v-chip class="ma-2" label link to="/SenFPoules">
                            <v-icon left>mdi-view-split-vertical</v-icon> Poules
                         </v-chip>
@@ -146,6 +180,10 @@
                       </v-simple-table>
                       <v-divider></v-divider>
                       <v-card-actions class="pa-0 ">
+                          <v-chip class="ma-2" label @click.stop="dialogSalles = true">
+                             <v-icon left>mdi-home-switch-outline</v-icon> Les Salles
+                          </v-chip>
+                          <v-spacer></v-spacer>
                         <v-chip class="ma-2" label link to="/U15FPoules">
                            <v-icon left>mdi-view-split-vertical</v-icon> Poules
                         </v-chip>
@@ -168,6 +206,7 @@ export default {
       return {
         dialogMap: false,
         dialogQRcode: false,
+        dialogSalles: false,
         url: process.env.BASE_URL + "datas/info_tournoi.json",
         equipesSenF: null,
         equipesU15F: null,

@@ -50,7 +50,7 @@
     <v-col>
         <v-card class="mx-auto" >
             <v-card dark flat >
-                <v-card-title class="pa-2 primary lighten-3">
+                <v-card-title class="pa-2 secondary lighten-3">
                     <h3 class="font-weight-light text-center black grow">
                         Ligne de temps - Matchs de Classement
                     </h3>
@@ -59,7 +59,7 @@
             <v-card-text class="pa-1 ma-0">
                 <v-timeline align-top dense >
 
-                    <v-timeline-item color="primary" v-for="item in getMatchsFinales" v-bind:key="item.id">
+                    <v-timeline-item color="secondary" v-for="item in getMatchsFinales" v-bind:key="item.id">
                         <v-card max-width="400" class="pa-0 ma-0">
                             <v-card-title>
                                 <strong>{{ item.heureDebut }} - {{ item.salle }}</strong>

@@ -107,18 +107,18 @@
       "categorie_id": "U15F_c2",
       "id": "U15F6",
       "nom": "Changé U15F",
-      "nomCourt": "Changé",
+      "nomCourt": "Changé ",
       "fanion": "change.png"
     }
   ],
   "lessalles": [
     {
-      "id": "CCVL",
+      "id": "2-CCVL",
       "nom":"CCVL",
       "nomlong": "Gymnase Val Du Loir"
     },
     {
-      "id": "GLC",
+      "id": "1-GLC",
       "nom": "GLCroix",
       "nomlong": "Gymnase GuyLaCroix"
     }

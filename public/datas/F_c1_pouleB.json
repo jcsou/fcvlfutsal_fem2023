@@ -8,42 +8,42 @@
   "lesmatchs": [
     {
       "id": 5,
-      "salle": "GLC",
+      "salle": "1-GLC",
       "heureDebut": "20:16",
       "equipeDom": {"id": "F5","but": ""},
       "equipeExt": {"id": "F6","but": ""}
     },
     {
       "id": 7,
-      "salle": "GLC",
+      "salle": "1-GLC",
       "heureDebut": "20:24",
       "equipeDom": {"id": "F7","but": ""},
       "equipeExt": {"id": "F8","but": ""}
     },
     {
       "id": 13,
-      "salle": "GLC",
+      "salle": "1-GLC",
       "heureDebut": "20:48",
       "equipeDom": {"id": "F6","but": ""},
       "equipeExt": {"id": "F8","but": ""}
     },
     {
       "id": 15,
-      "salle": "GLC",
+      "salle": "1-GLC",
       "heureDebut": "20:56",
       "equipeDom": {"id": "F5","but": ""},
       "equipeExt": {"id": "F7","but": ""}
     },
     {
       "id": 22,
-      "salle": "CCVL",
+      "salle": "2-CCVL",
       "heureDebut": "21:20",
       "equipeDom": {"id": "F6","but": ""},
       "equipeExt": {"id": "F7","but": ""}
     },
     {
       "id": 24,
-      "salle": "CCVL",
+      "salle": "2-CCVL",
       "heureDebut": "21:28",
       "equipeDom": {"id": "F8","but": ""},
       "equipeExt": {"id": "F5","but": ""}
