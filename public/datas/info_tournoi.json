@@ -58,7 +58,7 @@
       "categorie_id": "F_c1",
       "id": "F7",
       "nom": "Changé U18F",
-      "nomCourt": "Changé18",
+      "nomCourt": "Changé",
       "fanion": "change.png"
     },
     {
@@ -86,43 +86,29 @@
       "categorie_id": "U15F_c2",
       "id": "U15F3",
       "nom": "Guecelard/La suze",
-      "nomCourt": "GuecelardSuze",
+      "nomCourt": "Guecelard",
       "fanion": "guecelardlasuze.png"
     },
     {
       "categorie_id": "U15F_c2",
       "id": "U15F4",
-      "nom": "-",
-      "nomCourt": "-",
-      "fanion": "district.png"
-    },
-    {
-      "categorie_id": "U15F_c2",
-      "id": "U15F5",
       "nom": "G. Val de Sarthe",
-      "nomCourt": "Val de Sarthe",
+      "nomCourt": "ValDeSarthe",
       "fanion": "valdesarthe.png"
     },
     {
       "categorie_id": "U15F_c2",
-      "id": "U15F6",
+      "id": "U15F5",
       "nom": "FC Val Du Loir 2",
       "nomCourt": "FCVL2",
       "fanion": "fcvl.png"
     },
     {
       "categorie_id": "U15F_c2",
-      "id": "U15F7",
+      "id": "U15F6",
       "nom": "Changé U15F",
-      "nomCourt": "Changé15",
+      "nomCourt": "Changé",
       "fanion": "change.png"
-    },
-    {
-      "categorie_id": "U15F_c2",
-      "id": "U15F8",
-      "nom": "-",
-      "nomCourt": "-",
-      "fanion": "district.png"
     }
   ],
   "lessalles": [

@@ -1,21 +1,21 @@
 {
   "lesmatchs": [
     {
-      "id": 29,
+      "id": 30,
       "salle": "CCVL",
-      "heureDebut": "22:06",
-      "nom": "3ieme PouleA, 4ieme PouleB",
+      "heureDebut": "21:52",
+      "nom": "3ieme PA, 4ieme PB",
       "code": "place5_8-1",
       "niveau": "1",
       "equipeDom": {"id": "","but": ""},
       "equipeExt": {"id": "","but": ""}
     },
     {
-      "id": 30,
+      "id": 32,
       "salle": "CCVL",
-      "nom": "3ieme PouleB, 4ieme PouleA",
+      "nom": "3ieme PB, 4ieme PA",
       "code": "place5_8-2",
-      "heureDebut": "22:14",
+      "heureDebut": "22:00",
       "niveau": "1",
       "equipeDom": {"id": "","but": ""},
       "equipeExt": {"id": "","but": ""}
@@ -24,18 +24,18 @@
     {
       "id": 31,
       "salle": "GLC",
-      "heureDebut": "22:06",
-      "nom": "1er PouleA, 2nd PouleB",
+      "heureDebut": "22:00",
+      "nom": "1er PA, 2nd PB",
       "code": "place1_4-1",
       "niveau": "1",
       "equipeDom": {"id": "","but": ""},
       "equipeExt": {"id": "","but": ""}
     },
     {
-      "id": 32,
+      "id": 33,
       "salle": "GLC",
-      "heureDebut": "22:14",
-      "nom": "1er PouleB, 2nd PouleA",
+      "heureDebut": "22:08",
+      "nom": "1er PB, 2nd PA",
       "code": "place1_4-2",
       "niveau": "1",
       "equipeDom": {"id": "","but": ""},
@@ -45,9 +45,9 @@
 
 
     {
-      "id": 37,
+      "id": 36,
       "salle": "CCVL",
-      "heureDebut": "22:38",
+      "heureDebut": "22:16",
       "nom": "Classement 7/8 iéme",
       "code": "place7_8",
       "niveau": "2",
@@ -55,9 +55,9 @@
       "equipeExt": {"id": "","but": ""}
     },
     {
-      "id": 36,
-      "salle": "GLC",
-      "heureDebut": "22:14",
+      "id": 38,
+      "salle": "CCVL",
+      "heureDebut": "22:24",
       "nom": "Classement 5/6 iéme",
       "code": "place5_6",
       "niveau": "2",
@@ -65,9 +65,9 @@
       "equipeExt": {"id": "","but": ""}
     },
     {
-      "id": 38,
+      "id": 37,
       "salle": "GLC",
-      "heureDebut": "22:06",
+      "heureDebut": "22:24",
       "nom": "Classement 3/4 iéme",
       "code": "place3_4",
       "niveau": "2",
@@ -75,11 +75,11 @@
       "equipeExt": {"id": "","but": ""}
     },
     {
-      "id": 40,
+      "id": 41,
       "salle": "GLC",
       "nom": "Finale",
       "code": "place1-2",
-      "heureDebut": "22:54",
+      "heureDebut": "22:40",
       "niveau": "2",
       "equipeDom": {"id": "","but": ""},
       "equipeExt": {"id": "","but": ""}

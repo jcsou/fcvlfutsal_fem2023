@@ -27,6 +27,16 @@ export default new Router({
         component: () => import('./views/SenFFinalesView.vue')
     },
     {
+        path: '/U15FPoules',
+        name: 'U15FPoules',
+        component: () => import('./views/U15FPoulesView.vue')
+    },
+    {
+        path: '/U15FFinales',
+        name: 'U15FFinales',
+        component: () => import('./views/U15FFinalesView.vue')
+    },
+    {
          path: '/Timeline',
          name: 'Timeline',
          component: () => import('./views/TimelineView.vue')

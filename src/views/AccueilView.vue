@@ -10,6 +10,7 @@
                     </h3>
                     <p class="font-weight-light grey--text">Vendredi Soir 06/01/2023 : Rdv 19h30, Début 20h</p>
                     <p class="font-weight-light grey--text">2 catégories : <a @click="scrollMeTo('SenF')" >Seniors F/U18F</a> et <a @click="scrollMeTo('U15F')" >U15F</a> </p>
+                    <p class="font-weight-light grey--text">Temps de jeu 7 minutes, Rotation toutes les 8 minutes</p>
                   </v-card-text>
                   <v-card-actions class="pa-1">
                     <v-chip class="ma-2" label link href="pdf/01_ReglementTournoi2023.pdf">
