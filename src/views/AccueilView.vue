@@ -48,8 +48,9 @@
                 <v-dialog v-model="dialogQRcode" max-width="500">
                   <v-card class="pa-1">
                     <v-card-title class="text-h5 pa-1">
-                        <h3 class="display-2 font-weight-light mb-3 black--text">Partager ce site avec ce QRCode ...</h3>
-                        <h6 class="display-2 black--text">https://fcvalduloir.pagesperso-orange.fr/TES2023Fem/dist/</h6>
+                        <h3 class="display-2 font-weight-light mb-3 black--text">TournoiEnSalle FCVL 2023 Féminin</h3>
+                        <h6 class="display-1 black--text">Partager ce site avec ce QRCode ...</h6>
+                        <h6 class="display-1 black--text">https://fcvalduloir.pagesperso-orange.fr/TES2023Fem/dist/</h6>
                     </v-card-title>
                     <v-card-text class="pa-1">
                       <v-img class="mx-auto" max-height="450px" max-width="450px" src="img/QRsite.png" alt="QRsite"/>

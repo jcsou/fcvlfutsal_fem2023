@@ -213,7 +213,7 @@ export default {
                 .then(response => {
                   this.lesmatchs_c1_pB = response.data.lesmatchs
 
-                  for (var n in this.lesmatchs_c1_pA ) {
+                  for (var n in this.lesmatchs_c1_pB ) {
                     this.lesmatchs_c1_pB[n].score = this.lesmatchs_c1_pB[n].equipeDom.but+" - "+this.lesmatchs_c1_pB[n].equipeExt.but
                     this.lesmatchs_c1_pB[n].displayDom = this.lesequipeskey[this.lesmatchs_c1_pB[n].equipeDom.id]
                     this.lesmatchs_c1_pB[n].displayExt = this.lesequipeskey[this.lesmatchs_c1_pB[n].equipeExt.id]

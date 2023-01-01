@@ -1,0 +1,126 @@
+{
+  "lescategories": [
+    {
+      "id": "F_c1",
+      "nom": "SenF/U18F",
+      "nomlong": "Seniors F et U18F"
+    },
+    {
+      "id": "U15F_c2",
+      "nom": "U15F",
+      "nomlong": "U15F"
+    }
+  ],
+  "lesequipes": [
+    {
+      "categorie_id": "F_c1",
+      "id": "F1",
+      "nom": "Breil Sur Merise 1",
+      "nomCourt": "Breil1",
+      "fanion": "breilsurmerise.png"
+    },
+    {
+      "categorie_id": "F_c1",
+      "id": "F2",
+      "nom": "FC Val Du Loir 1",
+      "nomCourt": "FCVL1",
+      "fanion": "fcvl.png"
+    },
+    {
+      "categorie_id": "F_c1",
+      "id": "F3",
+      "nom": "COC",
+      "nomCourt": "COC",
+      "fanion": "coc.png"
+    },
+    {
+      "categorie_id": "F_c1",
+      "id": "F4",
+      "nom": "StSaturnin-LaMilesse",
+      "nomCourt": "FCSSM",
+      "fanion": "saintsatmilesse.png"
+    },
+    {
+      "categorie_id": "F_c1",
+      "id": "F5",
+      "nom": "Breil Sur Merise 2",
+      "nomCourt": "Breil2",
+      "fanion": "breilsurmerise.png"
+    },
+    {
+      "categorie_id": "F_c1",
+      "id": "F6",
+      "nom": "FC Val Du Loir 2",
+      "nomCourt": "FCVL2",
+      "fanion": "fcvl.png"
+    },
+    {
+      "categorie_id": "F_c1",
+      "id": "F7",
+      "nom": "Changé U18F",
+      "nomCourt": "Changé",
+      "fanion": "change.png"
+    },
+    {
+      "categorie_id": "F_c1",
+      "id": "F8",
+      "nom": "FC Val Du Loir U18F",
+      "nomCourt": "FCVL_U18F",
+      "fanion": "fcvlu18f.png"
+    },
+    {
+      "categorie_id": "U15F_c2",
+      "id": "U15F1",
+      "nom": "Gatine",
+      "nomCourt": "Gatine",
+      "fanion": "gatine.png"
+    },
+    {
+      "categorie_id": "U15F_c2",
+      "id": "U15F2",
+      "nom": "FC Val Du Loir 1",
+      "nomCourt": "FCVL1",
+      "fanion": "fcvl.png"
+    },
+    {
+      "categorie_id": "U15F_c2",
+      "id": "U15F3",
+      "nom": "Guecelard/La suze",
+      "nomCourt": "Guecelard",
+      "fanion": "guecelardlasuze.png"
+    },
+    {
+      "categorie_id": "U15F_c2",
+      "id": "U15F4",
+      "nom": "G. Val de Sarthe",
+      "nomCourt": "ValDeSarthe",
+      "fanion": "valdesarthe.png"
+    },
+    {
+      "categorie_id": "U15F_c2",
+      "id": "U15F5",
+      "nom": "FC Val Du Loir 2",
+      "nomCourt": "FCVL2",
+      "fanion": "fcvl.png"
+    },
+    {
+      "categorie_id": "U15F_c2",
+      "id": "U15F6",
+      "nom": "Changé U15F",
+      "nomCourt": "Changé ",
+      "fanion": "change.png"
+    }
+  ],
+  "lessalles": [
+    {
+      "id": "2-CCVL",
+      "nom":"CCVL",
+      "nomlong": "Gymnase Val Du Loir"
+    },
+    {
+      "id": "1-GLC",
+      "nom": "GLCroix",
+      "nomlong": "Gymnase GuyLaCroix"
+    }
+  ]
+}
