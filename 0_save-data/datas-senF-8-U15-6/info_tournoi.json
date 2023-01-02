@@ -15,23 +15,23 @@
     {
       "categorie_id": "F_c1",
       "id": "F1",
-      "nom": "Breil Sur Merise 1",
-      "nomCourt": "Breil1",
-      "fanion": "breilsurmerise.png"
-    },
-    {
-      "categorie_id": "F_c1",
-      "id": "F2",
       "nom": "FC Val Du Loir 1",
       "nomCourt": "FCVL1",
       "fanion": "fcvl.png"
     },
     {
       "categorie_id": "F_c1",
-      "id": "F3",
+      "id": "F2",
       "nom": "COC",
       "nomCourt": "COC",
       "fanion": "coc.png"
+    },
+    {
+      "categorie_id": "F_c1",
+      "id": "F3",
+      "nom": "Breil Sur Merise 2",
+      "nomCourt": "Breil2",
+      "fanion": "breilsurmerise.png"
     },
     {
       "categorie_id": "F_c1",
@@ -43,16 +43,16 @@
     {
       "categorie_id": "F_c1",
       "id": "F5",
-      "nom": "Breil Sur Merise 2",
-      "nomCourt": "Breil2",
-      "fanion": "breilsurmerise.png"
+      "nom": "FC Val Du Loir 2",
+      "nomCourt": "FCVL2",
+      "fanion": "fcvl.png"
     },
     {
       "categorie_id": "F_c1",
       "id": "F6",
-      "nom": "FC Val Du Loir 2",
-      "nomCourt": "FCVL2",
-      "fanion": "fcvl.png"
+      "nom": "Breil Sur Merise 1",
+      "nomCourt": "Breil1",
+      "fanion": "breilsurmerise.png"
     },
     {
       "categorie_id": "F_c1",
@@ -68,6 +68,9 @@
       "nomCourt": "FCVL_U18F",
       "fanion": "fcvlu18f.png"
     },
+
+
+
     {
       "categorie_id": "U15F_c2",
       "id": "U15F1",
@@ -106,7 +109,7 @@
     {
       "categorie_id": "U15F_c2",
       "id": "U15F6",
-      "nom": "Changé U15F",
+      "nom": "Changé",
       "nomCourt": "Changé ",
       "fanion": "change.png"
     }

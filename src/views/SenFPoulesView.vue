@@ -126,7 +126,7 @@
                     </base-material-card>
 
                     <v-card max-width="400" class="mx-auto">
-                    <v-img class="mx-auto" max-height="200px" max-width="200px" src="img/pub/mma.png" alt="mma"/>
+                    <v-img class="mx-auto" max-height="200px" max-width="200px" src="img/pub/poules.png" alt="mma"/>
                     <v-card-title>Annonceurs</v-card-title>
                     </v-card>
                   </v-col>
