@@ -5,7 +5,7 @@
                 <v-card class="mx-auto" >
                     <v-card dark flat >
                         <v-card-title class="pa-1 primary lighten-3">
-                            <h4 class="font-weight-light text-center">
+                            <h4 class="font-weight-light text-center black--text">
                                 Matchs de Poule {{ c1_categorie }} / {{ c2_categorie }}
                             </h4>
                         </v-card-title>
@@ -51,7 +51,7 @@
                 <v-card class="mx-auto" >
                     <v-card dark flat >
                         <v-card-title class="pa-1 primary lighten-3">
-                            <h4 class="font-weight-light text-center">
+                            <h4 class="font-weight-light text-center black--text">
                                 Matchs de Classement {{ c1_categorie }} / {{ c2_categorie }}
                             </h4>
                         </v-card-title>
@@ -110,7 +110,6 @@ export default {
         c2_categorie: "U15F",
 
         url_c1_PouleA: process.env.BASE_URL + "datas/F_c1_pouleA.json",
-        url_c1_PouleB: process.env.BASE_URL + "datas/F_c1_pouleB.json",
         url_c2_Poule: process.env.BASE_URL + "datas/U15F_c2_pouleA.json",
 
         urlF_c1_finales: process.env.BASE_URL + "datas/F_c1_finales.json",
@@ -204,24 +203,7 @@ export default {
                     this.lesmatchs_c1_pA[n].score = this.lesmatchs_c1_pA[n].equipeDom.but+" - "+this.lesmatchs_c1_pA[n].equipeExt.but
                     this.lesmatchs_c1_pA[n].displayDom = this.lesequipeskey[this.lesmatchs_c1_pA[n].equipeDom.id]
                     this.lesmatchs_c1_pA[n].displayExt = this.lesequipeskey[this.lesmatchs_c1_pA[n].equipeExt.id]
-                    this.lesmatchs_c1_pA[n].categorie = this.c1_categorie + " / Poule A"
-                  }
-                }).catch(error => {
-                   console.log(error)
-                })
-
-            // Load PoulesB
-            var url_c1_PouleB = this.url_c1_PouleB;
-            axios
-                .get(url_c1_PouleB)
-                .then(response => {
-                  this.lesmatchs_c1_pB = response.data.lesmatchs
-
-                  for (var n in this.lesmatchs_c1_pB ) {
-                    this.lesmatchs_c1_pB[n].score = this.lesmatchs_c1_pB[n].equipeDom.but+" - "+this.lesmatchs_c1_pB[n].equipeExt.but
-                    this.lesmatchs_c1_pB[n].displayDom = this.lesequipeskey[this.lesmatchs_c1_pB[n].equipeDom.id]
-                    this.lesmatchs_c1_pB[n].displayExt = this.lesequipeskey[this.lesmatchs_c1_pB[n].equipeExt.id]
-                    this.lesmatchs_c1_pB[n].categorie = this.c1_categorie + " / Poule B"
+                    this.lesmatchs_c1_pA[n].categorie = this.c1_categorie
                   }
                 }).catch(error => {
                    console.log(error)

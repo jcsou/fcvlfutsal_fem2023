@@ -1,98 +1,42 @@
 {
   "lesmatchs": [
     {
-      "id": 30,
-      "salle": "2-CCVL",
-      "heureDebut": "21:52",
-      "nom": "3ieme PA, 4ieme PB",
-      "code": "place5_8-1",
-      "niveau": "1",
-      "equipeDom": {"id": "","but": ""},
-      "equipeExt": {"id": "","but": ""}
-    },
-    {
       "id": 32,
       "salle": "2-CCVL",
-      "nom": "3ieme PB, 4ieme PA",
-      "code": "place5_8-2",
-      "heureDebut": "22:00",
+      "heureDebut": "22:16",
+      "nom": "5ieme P, 6ieme P",
+      "code": "place5-6",
       "niveau": "1",
-      "equipeDom": {"id": "","but": ""},
-      "equipeExt": {"id": "","but": ""}
-    },
-
-    {
-      "id": 31,
-      "salle": "1-GLC",
-      "heureDebut": "22:00",
-      "nom": "1er PA, 2nd PB",
-      "code": "place1_4-1",
-      "niveau": "1",
-      "equipeDom": {"id": "","but": ""},
-      "equipeExt": {"id": "","but": ""}
+      "equipeDom": {"id": "F6","but": "0"},
+      "equipeExt": {"id": "F1","but": "1"}
     },
     {
       "id": 33,
       "salle": "1-GLC",
-      "heureDebut": "22:08",
-      "nom": "1er PB, 2nd PA",
-      "code": "place1_4-2",
-      "niveau": "1",
-      "equipeDom": {"id": "","but": ""},
-      "equipeExt": {"id": "","but": ""}
-    },
-
-
-
-    {
-      "id": 36,
-      "salle": "2-CCVL",
+      "nom": "3ieme P, 4ieme P",
+      "code": "place3-4",
       "heureDebut": "22:16",
-      "nom": "Classement 7/8 iéme",
-      "code": "place7_8",
-      "niveau": "2",
-      "equipeDom": {"id": "","but": ""},
-      "equipeExt": {"id": "","but": ""}
-    },
-    {
-      "id": 38,
-      "salle": "2-CCVL",
-      "heureDebut": "22:24",
-      "nom": "Classement 5/6 iéme",
-      "code": "place5_6",
-      "niveau": "2",
-      "equipeDom": {"id": "","but": ""},
-      "equipeExt": {"id": "","but": ""}
+      "niveau": "1",
+      "equipeDom": {"id": "F3","but": "1"},
+      "equipeExt": {"id": "F4","but": "0"}
     },
     {
       "id": 37,
       "salle": "1-GLC",
-      "heureDebut": "22:24",
-      "nom": "Classement 3/4 iéme",
-      "code": "place3_4",
-      "niveau": "2",
-      "equipeDom": {"id": "","but": ""},
-      "equipeExt": {"id": "","but": ""}
-    },
-    {
-      "id": 41,
-      "salle": "1-GLC",
-      "nom": "Finale",
+      "heureDebut": "22:32",
+      "nom": "Finale : 1er P, 2ieme P",
       "code": "place1-2",
-      "heureDebut": "22:40",
-      "niveau": "2",
-      "equipeDom": {"id": "","but": ""},
-      "equipeExt": {"id": "","but": ""}
+      "niveau": "1",
+      "equipeDom": {"id": "F2","but": ""},
+      "equipeExt": {"id": "F5","but": ""}
     }
   ],
   "leclassement": [
-    { "rang":"1", "equipe": ""},
-    { "rang":"2", "equipe": ""},
-    { "rang":"3", "equipe": ""},
-    { "rang":"4", "equipe": ""},
-    { "rang":"5", "equipe": ""},
-    { "rang":"6", "equipe": ""},
-    { "rang":"7", "equipe": ""},
-    { "rang":"8", "equipe": ""}
+    { "rang":"1", "equipe": "F5"},
+    { "rang":"2", "equipe": "F2"},
+    { "rang":"3", "equipe": "F3"},
+    { "rang":"4", "equipe": "F4"},
+    { "rang":"5", "equipe": "F1"},
+    { "rang":"6", "equipe": "F6"}
   ]
 }

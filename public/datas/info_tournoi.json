@@ -29,41 +29,27 @@
     {
       "categorie_id": "F_c1",
       "id": "F3",
-      "nom": "Breil Sur Merise 2",
-      "nomCourt": "Breil2",
-      "fanion": "breilsurmerise.png"
-    },
-    {
-      "categorie_id": "F_c1",
-      "id": "F4",
       "nom": "StSaturnin-LaMilesse",
       "nomCourt": "FCSSM",
       "fanion": "saintsatmilesse.png"
     },
     {
       "categorie_id": "F_c1",
-      "id": "F5",
+      "id": "F4",
       "nom": "FC Val Du Loir 2",
       "nomCourt": "FCVL2",
       "fanion": "fcvl.png"
     },
     {
       "categorie_id": "F_c1",
-      "id": "F6",
-      "nom": "Breil Sur Merise 1",
-      "nomCourt": "Breil1",
-      "fanion": "breilsurmerise.png"
-    },
-    {
-      "categorie_id": "F_c1",
-      "id": "F7",
+      "id": "F5",
       "nom": "Changé",
       "nomCourt": "Changé",
       "fanion": "change.png"
     },
     {
       "categorie_id": "F_c1",
-      "id": "F8",
+      "id": "F6",
       "nom": "Saint Osmane",
       "nomCourt": "StOsmane",
       "fanion": "osmane.png"
